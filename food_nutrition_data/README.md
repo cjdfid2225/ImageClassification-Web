@@ -11,6 +11,6 @@
 - DB에 필요한 테이블 논리모형 작성 + 테이블의 연결 관계나 더 필요한 사항은 없는지 확인 필요
 
 user (userid, username, usergender, userage, userweight)
-food_nutrition (food_code, food_name, serving_size, nutition1~9)	+ food_group
+food_nutrition (food_code, food_name, serving_size, nutition1-9)	+ food_group
 take_recommend (gender, age, weight? >> 조건에 따른 영양소별 권장 섭취량)	** 이 부분을 어떻게 작성해야 할지 난감
-user_intake (userid, date, intake_nutrition1~9)
+user_intake (userid, date, intake_nutrition1-9)
