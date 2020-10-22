@@ -1,0 +1,101 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HTML Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container body-content">
+
+        <form action="/upload" method="post" id='form1'>
+
+            <div class="container">
+                    <div class="row justify-content-start" style="padding-top:10px;">
+                           <h1>필수정보 입력</h1>
+                       </div>
+                <div class="row justify-content-start" style="padding-top:10px;">
+<label>키(cm)</label>
+
+
+
+                </div>
+                <div class="row justify-content-center" style="padding-top:10px;">
+<input class="form-control" name='cm' value=""></input>
+
+
+                </div>
+                <div class="row justify-content-start" style="padding-top:10px;">
+<label>몸무게(kg)</label>
+
+
+
+                </div>
+                <div class="row justify-content-start" style="padding-top:10px;">
+<input class="form-control" name='kg' value=""></input>
+
+
+                </div>
+                <div class="row justify-content-start" style="padding-top:10px;">
+
+                <div class="col" style="padding-top:10px;">
+<label>성별</label>
+
+
+
+                </div>
+                <div class="col" style="padding-top:10px;">
+<label>연령대</label>
+
+
+
+                </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:10px;">
+
+                <div class="col" style="padding-top:10px;">
+
+<select name="성별">
+    <option value="">성별선택</option>
+    <option value="여자">여자</option>
+    <option value="남자">남자</option>
+</select>
+                </div>
+
+                <div class="col" style="padding-top:10px;">
+<select name="연령대">
+    <option value="">연령대선택</option>
+    <option value="10대">10대</option>
+    <option value="20대">20대</option>
+    <option value="30대">30대</option>
+    <option value="40대">40대</option>
+    <option value="50대">50대</option>
+    <option value="60대">60대</option>
+</select>
+
+                
+     
+                </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:10px;">
+
+
+                <div class="col" style="padding-top:10px;">
+    <button type='submit' form='form1'
+        class='btn btn-primary'
+        onclick = "location.href = 'http://127.0.0.1:5000/upload' ">확인</button>
+                </div>
+                </div>
+
+
+</div>
+
+    </div>
+</form>
+</body>
+</html>
