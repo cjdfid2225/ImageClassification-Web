@@ -1,0 +1,120 @@
+{
+    "mappings": {
+      "properties": {
+        // "@timestamp": {     
+        //   "type": "date"
+        // },
+        "num": {
+          "type": "short"
+        },
+        "food_cd": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "food_name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "serving_size": {
+          "type": "integer"
+        },
+        // 여기 구조를 어떻게 하면 좋을까?
+        // 각 요소를 따로따로? or 이 안에 각 요소가 구성요소로 들어가게??
+        "nutr_cont": {
+          "properties" : {
+            "열량" : {
+              "type" : "short",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "탄수화물" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "단백질" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "지방" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "당류" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "나트륨" : {
+              "type" : "short",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "콜레스테롤" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "포화지방산" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "트랜스지방" : {
+              "type" : "half_float",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
