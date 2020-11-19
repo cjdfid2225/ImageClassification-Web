@@ -1,0 +1,36 @@
+#signup_title {
+    color: #ababab;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 40px
+}
+
+.Signup {
+    padding: 70px 0px 0px 0%;
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.Signup div {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.Signup div input { padding: 3px; }
+
+input[name=signup_name] { width: 120px; }
+input[name=signup_height] { width: 120px;}
+input[name=signup_weight] { width : 120px }
+select[name=signup_sex_select] { padding: 3px; margin-left: 5px; }
+select[name=signup_age_select] { padding: 3px; margin-left: 5px; }
+
+input[name=sigunup_submit] { 
+    margin : 0% 54% 0% 46%; 
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    border: solid 1px #ababab;
+    background-color: white; 
+    cursor: pointer;
+}
+
+#signup_section { border-left: solid 1px #ababab; }
