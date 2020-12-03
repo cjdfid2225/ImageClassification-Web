@@ -22,8 +22,14 @@ import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 
 
 
-function ProfilePage({match}) {
-  const {user_id,user_age,user_sex} = match.params
+function ProfilePage({match,history}) {
+  // const {user_id,user_age,user_sex} = match.params
+
+  const {a,b,c,d,e}=history.location.state
+
+  const user_id = c;
+  const user_age = d;
+  const user_sex = e;
   const [pills, setPills] = React.useState("2");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -34,6 +40,15 @@ function ProfilePage({match}) {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
+
+
+  console.log(history)
+  console.log(b)
+  console.log(c)
+  console.log(d)
+  console.log(e)
+
 
   const butaction = () => {
     window.location.href = "/image_upload/"+user_id+"/"+user_age+"/"+user_sex
@@ -200,6 +215,17 @@ function ProfilePage({match}) {
                 </TabPane>
               </TabContent>
             </Row>
+
+            <Row>
+            <Col md="6">
+                            <Plot
+                              data={a}
+                              layout={b}
+                            />
+                          </Col>
+
+            </Row>
+
           </Container>
         </div>
         {/* <DefaultFooter /> */}

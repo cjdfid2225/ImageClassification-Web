@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 import Input_Images3_gets3 from "./Input_Images3_gets3.js";
 // import Output_Images3_gets3 from "./Output_Images3_gets3.js";
@@ -36,10 +37,12 @@ class Image_upload extends Component {
       jsonLayout: {}
     };
 
-
+    console.log(props)
 
     this.handlePost = this.handlePost.bind(this);
     this.handleAnalysis = this.handleAnalysis.bind(this);
+
+    this.testPost = this.testPost.bind(this);
   }
 
   handleFileInput(e) {
@@ -47,6 +50,23 @@ class Image_upload extends Component {
       selectedFile: e.target.files[0],
     });
   }
+
+  testPost() {
+    console.log("2323")
+
+    const data = {
+      a : this.state.jsonData,
+      b : this.state.jsonLayout,
+      c : this.props.match.params.user_id,
+      d : this.props.match.params.user_age,
+      e : this.props.match.params.user_sex
+    }
+
+    console.log("test",data)
+    
+    this.props.history.push('/profile-page/',data)
+  }
+
 
   handlePost() {
     const formData = new FormData();
@@ -99,10 +119,7 @@ class Image_upload extends Component {
           jsonLayout: data.layout,
         });
       });
-        
-
-
-        // this.setState({
+         // this.setState({
         //   output_s3path: data.url,
         // });
   }
@@ -139,6 +156,13 @@ class Image_upload extends Component {
                   onClick={this.handleAnalysis}
                 >
                   분석하기
+                </Button>
+                <Button
+                  color="info"
+                  type="button"
+                  onClick={this.testPost}
+                >
+                  결과보기
                 </Button>
               </Col>
             </Row>
