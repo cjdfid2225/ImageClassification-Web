@@ -8,9 +8,9 @@ from pymysql import DATE, NULL
 # DB에 연결하는 함수
 def db_connect():
     conn = pymysql.connect(
-    user='admin',
-    passwd='dpszhdk5!',
-    host = "database-2.ceybukxcddbz.ap-northeast-2.rds.amazonaws.com",
+    user='',
+    passwd='',
+    host = "",
     db='project',
     charset='utf8',
     autocommit=True)
