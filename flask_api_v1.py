@@ -120,21 +120,21 @@ def process():
     
     # 바 그래프 그리기
     f_name = sql_result['food_name']
-    name, val = list(), list() 
+    n_name, n_val = list(), list() 
     for elem in sql_result: 
         if 'ntr' in elem: 
-            name.append(elem) 
-            val.append(sql_result[elem])
+            n_name.append(elem) 
+            n_val.append(sql_result[elem])
 
     # 누적 그래프 그리기
-    name, val = list(), list()
+    t_name, t_val = list(), list()
     for elem in sumdata:
         if 'total' in elem:
-            name.append(elem)
-            val.append(sumdata[elem])
+            t_name.append(elem)
+            t_val.append(sumdata[elem])
 
-    res1 = plot_bar_ntr(name, val, f_name)
-    res2 = plot_bar_ntr(name, val, date)
+    res1 = plot_bar_ntr(n_name, n_val, f_name)
+    res2 = plot_bar_ntr(t_name, t_val, u_id)
     print(jsonify(res1)) # 업로드한 음식의 영양분
     print(jsonify(res2)) # 업로드한 사람의 총 영양분
     fin_res = dict(
